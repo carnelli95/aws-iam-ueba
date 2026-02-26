@@ -1,0 +1,349 @@
+{
+  "Records": [
+    {
+      "eventID": "a001",
+      "eventTime": "2024-01-15T09:10:00Z",
+      "eventName": "ListBuckets",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/alice",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": true}
+    },
+    {
+      "eventID": "a002",
+      "eventTime": "2024-01-15T10:05:00Z",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/alice",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": true}
+    },
+    {
+      "eventID": "a003",
+      "eventTime": "2024-01-15T11:30:00Z",
+      "eventName": "DescribeInstances",
+      "eventSource": "ec2.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/alice",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": true}
+    },
+    {
+      "eventID": "a004",
+      "eventTime": "2024-01-15T13:20:00Z",
+      "eventName": "ListUsers",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/alice",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": true}
+    },
+    {
+      "eventID": "a005",
+      "eventTime": "2024-01-15T15:45:00Z",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/alice",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": true}
+    },
+    {
+      "eventID": "b001",
+      "eventTime": "2024-01-15T23:10:00Z",
+      "eventName": "CreateUser",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "198.51.100.11",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b002",
+      "eventTime": "2024-01-16T00:30:00Z",
+      "eventName": "AttachUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "198.51.100.22",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "requestParameters": {"policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"},
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b003",
+      "eventTime": "2024-01-16T01:15:00Z",
+      "eventName": "CreateAccessKey",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.33",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b004",
+      "eventTime": "2024-01-16T02:05:00Z",
+      "eventName": "DeleteUser",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.44",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b005",
+      "eventTime": "2024-01-16T03:40:00Z",
+      "eventName": "PutUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "198.51.100.55",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b006",
+      "eventTime": "2024-01-16T04:10:00Z",
+      "eventName": "CreateRole",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "198.51.100.55",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "b007",
+      "eventTime": "2024-01-16T05:00:00Z",
+      "eventName": "AttachRolePolicy",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "198.51.100.66",
+      "userAgent": "python-boto3/1.26",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/bob",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c001",
+      "eventTime": "2024-01-16T03:01:00Z",
+      "eventName": "ListBuckets",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c002",
+      "eventTime": "2024-01-16T03:02:00Z",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c003",
+      "eventTime": "2024-01-16T03:03:00Z",
+      "eventName": "DescribeInstances",
+      "eventSource": "ec2.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c004",
+      "eventTime": "2024-01-16T03:04:00Z",
+      "eventName": "ListUsers",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c005",
+      "eventTime": "2024-01-16T03:05:00Z",
+      "eventName": "ListRoles",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c006",
+      "eventTime": "2024-01-16T03:06:00Z",
+      "eventName": "GetAccountSummary",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized",
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c007",
+      "eventTime": "2024-01-16T03:10:00Z",
+      "eventName": "AssumeRole",
+      "eventSource": "sts.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "requestParameters": {"roleArn": "arn:aws:iam::111122223333:role/AdminRole"},
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c008",
+      "eventTime": "2024-01-16T03:15:00Z",
+      "eventName": "CreateUser",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c009",
+      "eventTime": "2024-01-16T03:16:00Z",
+      "eventName": "AttachUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "ap-northeast-2",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "requestParameters": {"policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"},
+      "additionalEventData": {"MFAUsed": false}
+    },
+    {
+      "eventID": "c010",
+      "eventTime": "2024-01-16T03:17:00Z",
+      "eventName": "CreateAccessKey",
+      "eventSource": "iam.amazonaws.com",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.99",
+      "userAgent": "curl/7.68",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::111122223333:user/charlie",
+        "accountId": "111122223333"
+      },
+      "additionalEventData": {"MFAUsed": false}
+    }
+  ]
+}

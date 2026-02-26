@@ -1,0 +1,255 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T02:30:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.1",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": { "userName": "bob" },
+      "responseElements": { "accessKey": { "accessKeyId": "AKIAIOSFODNN7NEWKEY" } },
+      "eventID": "evt-001",
+      "additionalEventData": { "MFAUsed": false }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T02:45:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.1",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": {
+        "userName": "bob",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "eventID": "evt-002",
+      "additionalEventData": { "MFAUsed": false }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T03:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "ap-northeast-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": { "userName": "backdoor-user" },
+      "responseElements": { "user": { "userName": "backdoor-user" } },
+      "eventID": "evt-003",
+      "additionalEventData": { "MFAUsed": false }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T03:10:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "PutUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": {
+        "userName": "backdoor-user",
+        "policyName": "FullAccess",
+        "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"*\"}]}"
+      },
+      "responseElements": null,
+      "eventID": "evt-004",
+      "errorCode": null,
+      "additionalEventData": { "MFAUsed": false }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE2",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE2",
+        "userName": "bob"
+      },
+      "eventTime": "2024-01-15T09:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.1.100",
+      "userAgent": "aws-sdk-python/1.0",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "evt-005",
+      "additionalEventData": { "MFAUsed": true }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:20:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": { "userName": "alice" },
+      "responseElements": null,
+      "eventID": "evt-006",
+      "errorCode": "NoSuchEntity",
+      "errorMessage": "The user with name alice cannot be found.",
+      "additionalEventData": {}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:21:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": { "userName": "bob" },
+      "responseElements": null,
+      "eventID": "evt-007",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: charlie is not authorized to perform: iam:GetUser",
+      "additionalEventData": {}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:22:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "evt-008",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: charlie is not authorized to perform: iam:ListUsers",
+      "additionalEventData": {}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:23:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "evt-009",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: charlie is not authorized to perform: iam:ListRoles",
+      "additionalEventData": {}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:24:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListPolicies",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "evt-010",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: charlie is not authorized to perform: iam:ListPolicies",
+      "additionalEventData": {}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAI5ZTROMDEXAMPLE3",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE3",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-01-15T14:25:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetAccountSummary",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.2.50",
+      "userAgent": "aws-cli/2.0",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "evt-011",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: charlie is not authorized to perform: iam:GetAccountSummary",
+      "additionalEventData": {}
+    }
+  ]
+}
